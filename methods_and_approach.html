@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Related Work Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>3. Methods and Approaches</h1>
+    <h4> We are following a simplified version of CRISP-DM (Cross-Industry Standard Process for Data Mining)</h4>
+    <p>Reference: <a href="https://en.wikipedia.org/wiki/Cross-industry_standard_process_for_data_mining">Wikipedia</a></p>
+
+    <ol>
+        <li>Business Understanding</li>
+        <li>Data Understanding</li>
+        <li>Data Preparation</li>
+        <li>Modeling</li>
+        <li>Evaluation</li>
+        <li>Deployment</li>
+    </ol>
+
+    <h4>Adjusted to our objectives and context, this is: </h4>
+    <ol>
+        <li>Research</li>
+        <li>Problem Definition / Scope</li>
+        <li>Data Engineering</li>
+        <li>Model Development</li>
+        <li>Model Evaluation</li>
+        <li>Content Production</li>
+        <li>Presentation</li>
+    </ol>
+
+    <h3>3.1 Data</h3>
+    <p>We are using three (3) main sources for separate and combined training inputs and performance benchmarking: 
+    </p> 
+    <ul>
+        <li>Publicly available datasets </li>
+        <li>Privately sourced / crafted datasets </li>
+        <li>Synthetic data from augmentation </li>
+    </ul>
+
+
+
+
+    <h4> Publicly Available Datasets</h4>
+    <ul>
+        <li><a href="https://github.com/tum-fml/loco">LOCO: Logistics Objects in Context</a></li>
+        <li><a href="http://armbench.s3-website-us-east-1.amazonaws.com/">ARMBENCH: Amazon Robotic Manipulation Benchmark Dataset</a></li>
+        <!-- Add other datasets here -->
+    </ul>
+
+    <h4> Privately Sourced / Crafted Datasets</h4>
+    <p>We gained access to third parties with high-end labeled data collection equipment, successfully used for the purpose and domain application. Robust multi-modal sensing devices incorporating LIDAR and depth cameras produced for us frame-by-frame images of logistics objects of interest in context, together with image content’s measures with respect to established coordinate systems. Output was validated via special-purpose software and refined and sampled by human eye. One of our teammates had prior experience with this and assisted directly. Below is a sample from a sourced set produced during collection tours at a warehouse location open to intralogistics public in Hamburg, Germany.</p>
+    <!-- Add sample images here -->
+
+    <h4>Synthetic Data from Augmentation</h4>
+    <p>We are leveraging existing assets to produce augmented data (see 3.4 Software).</p>
+
+    <h3>3.2 Hardware</h3>
+    <p>For training and testing, we are using Intel-based compute, equipped with RTX 4000 NVIDIA hardware, and Apple-based compute, equipped with M3 Max 128GB silicon.</p>
+    <p>For inference, we are using the above plus NVIDIA Jeston hardware, Nano and Xavier models, equipped with common camera models: Intel RealSense d435i (MSRP $334), Stereolabs Zed 2 (MSRP $449), and Orlaco EMOS (third-party sourced), as previously mentioned.</p>
+
+    <h3>3.3 Software</h3>
+    <p>For data augmentation in general, and adaptation of certain pre-trained models in particular (available in the tool at the time of this writing) we are relying on NVIDIA TAO (Transfer, Adapt, Optimize, first released before 2019 under the name Transfer Learning Toolkit, TLT). Particularly, we are testing NVIDIA TAO’s launcher CLI to consume TAO-native: 1) latest available YOLO and Fast R-CNN architectures, 2) offline and online data augmentation assets, 3) transfer learning and fine-tuning adaptation assets, and 4) optimized model deployment to NVIDIA Jetson via NVIDIA DeepStream.</p>
+    <p>We are consuming YOLOv9 from Ultralytics.</p>
+    <p>We are automating our end-to-end pipeline via scripts, for convenience, and testing, whenever possible, at varied target distances, contextual surroundings, and levels of vehicular speed and autonomy, to perform closed-circuit tours within available warehouses and distribution centers.</p>
+
+    <h3>3.4 Model Architectures</h3>
+    <p>As we need real-time inferencing from a moving device with limited wattage availability, we are targeting most recent versions of YOLO and Fast-RCNN, available in TAO – YOLOv5, etc— and latest versions of YOLO –YOLOv9, etc—, available in Ultralytics.</p>
+</body>
+
+</html>

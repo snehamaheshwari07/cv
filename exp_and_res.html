@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments / Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+    <body>
+        <h1>4. Experiments / Results</h1>
+        <p>We recorded runs in real-time with overlaid inference results, for analysis.</p>
+        <p>Our best runs achieved worst-case 15m range 96% accuracy, and best-case at less than 5m 98% in available, real-life testing environments at 45+ FPS on mid-level NVIDIA Jetson Xavier hardware (MSRP $479 to $579) using an Intel RealSense d435i (MSRP $334), when trained on a combination of data from both generally available and privately sourced datasets.</p>
+        <p>As expected, YOLO versions (v5 and above) outperformed Faster R-CNN in speed by a factor greater than two (2) on each run; in our scenario, YOLO maintained accuracy with respect to Faster R-CNN within 7% over short, medium, and long-range inference distance at same average forklift speed and near identical surrounding conditions.</p>
+
+
+    </body>
+
+</html>

@@ -1,2 +1,2 @@
-# cv
-Computer Vision Project
+Computer Vision Project - Team A
+

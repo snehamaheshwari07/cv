@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CV Project Team-A </title>
+    <style>
+        * {
+            border: 0;
+            margin: 0;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .navbar {
+            position: relative;
+            background-image: url('bg.jpg');
+            background-size: cover;
+
+            /* background-color: #333; */
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Center the content */
+            align-items: center;
+            width: 100%;
+            padding: 20px 0; /* Add vertical padding */
+        }
+
+        .navbar-center {
+            text-align: center; /* Center-align the inner content */
+        }
+
+        .navbar-title {
+            color: rgb(255, 255, 255);
+            font-size: xx-large;
+            margin-bottom: 10px; /* Space between title and names */
+        }
+
+        .navbar-info {
+            color: white;
+            margin-bottom: 10px;
+            display:inline-block;
+            background-color: rgb(0, 0, 0,0.8);
+             /* Space between names and GitHub button */
+        }
+
+        .github-btn {
+            background-color: #4CAF50;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .github-btn:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .hyperlink {
+            color: #007BFF; /* Set the text color */
+            text-decoration: underline; /* Add underline */
+            cursor: pointer; /* Change cursor to indicate it's clickable */
+            /* Reset any other button-like styles */
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            margin: 20px 0;
+        }
+
+        .dropdown select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 5em;
+        }
+        .team-contributions {
+            margin-top: 20px;
+        }
+
+        .team-contributions h2 {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .image-container {
+            
+            margin-left: 20px; /* Adjust as needed */
+        }
+
+        .image-container img {
+            max-width: 100%; /* Ensure images don't exceed container width */
+            height: auto;
+            display: block;
+        }
+        .problem-definition {
+            overflow: hidden; /* Clear float */
+            /* padding-top: 0px; */
+            display: flex; /* Use flexbox to align items */
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .problem-definition-content {
+            /* float: center; */
+            width: 100%; /* Adjust width according to your design */
+            /* Add any additional styling for the content */
+            padding-bottom:10px;
+        }
+
+        .problem-definition-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 400px; /* Adjust width according to your design */
+            height: 400px;
+            padding-bottom: 10px;
+            /* Add any additional styling for the image */
+            /* padding-top: 60px; */
+        }
+
+        .problem-definition-image img {
+            max-width: 100%; /* Ensure image fills its container */
+            max-height: 100%; /* Maintain aspect ratio */
+        }
+        .problem-definition-image p {
+            font-size: 14px; /* Adjust font size */
+            line-height: 1.4; 
+        }
+        .video-with-description {
+            margin: 0 auto;
+            width: 80%; /* Set width to 80% of overall width */
+            padding: 20px;
+        }
+
+        .video-with-description video {
+            display: block; /* Ensure video is centered */
+            margin: 0 auto; /* Center align video */
+            width: 100%; /* Make video fill the container */
+            height: auto;
+        }
+
+        .video-with-description p {
+            margin-top: 10px; /* Adjust spacing between video and text */
+            font-size: 14px; /* Adjust font size */
+            line-height: 1.4; 
+        }
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav id="top" class="navbar" style="background-image: url('bg.jpg');">
+        <div class="navbar-center">
+            <div class="navbar-title">
+                Real-Time Intelligent Video Analytics (IVA) for Intralogistics 
+            </div>
+            <div class="navbar-info">
+                <p>Jaegook Alex Kim, McKay Moore, Oscar Hasburn-Babich, Sneha Maheshwari</p>
+                <p> alex.jg.kim, bmckaym, ohasburn3, smaheshwari63 @gatech.edu</p>
+            </div>
+            <!-- <a href="https://github.gatech.edu/smaheshwari63/cv" target="_blank" class="github-btn">GitHub Repository</a> -->
+        </div>
+    </nav>
+    
+    
+    <div class="container">
+        <p>Our goal is to deliver a modular, cost-effective, vehicle-mountable intelligent video analytics (IVA) solution for key intralogistics asset inventorying and reporting in real time. As a first step, we aim to broadcast pallet detection, location, and count inference from a prototype affixed to a forklift, driven in designated lanes within a warehouse.
+        </p>
+        <!-- <h2>Video</h2> -->
+        <div class="video-with-description">
+            <video controls width="100%" height="400">
+                <source src="Sample_Output.m4v" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Running inference at 45+ FPS on mid-level NVIDIA Jetson Xavier NX hardware (MSRP $479 to $579) and Intel RealSense d435i (MSRP $334), Stereolabs Zed 2 (MSRP $449), and Orlaco EMOS cameras.</p>
+        </div>
+        <!-- <h2>Problem Definition</h2>
+        <p>Our goal is to deliver a cost-effective, small-footprint, real-time inventorying solution for chosen intralogistics asset(s) count and location in distribution centers. We are leveraging state-of-the-art (SOTA) real-time object detection architectures and accelerated edge computing technologies with low-power consumption and portability requirements in mind. Preliminary results indicate our approach can run inference at 45+ FPS on mid-level NVIDIA Jetson Xavier NX hardware (MSRP $479 to $579) and Intel RealSense d435i (MSRP $334), Stereolabs Zed 2 (MSRP $449), and Orlaco EMOS (third-party sourced) cameras at worst-case 15m range 80%+ detection accuracy with respect to ground-truth in a real-life testing environment.</p> -->
+        <h2>Contents</h2>
+        <h3><a href="#problem" class="hyperlink">1. Problem Definition</a></h3>
+        <h3><a href="#related" class="hyperlink">2. Related Work</a></h3>
+        <h3><a href="#methods" class="hyperlink">3. Methods and Approaches</a></h3>
+        <h3><a href="#results" class="hyperlink">4. Preliminary Experiments / Results</a></h3>
+        <h3><a href="#next-steps" class="hyperlink">5. Project Process and What's Next</a></h3>
+        <h3><a href="#credits" class="hyperlink">6. Team Contributions</a></h3>
+        
+        <div id="problem" class="problem-definition">
+            <div class="problem-definition-content">
+                <h2>1. Problem Definition <a class="hyperlink" href="#top">↥</a></h2>
+                <p>Pallets –flat transport structures for goods— and operational pallet space in warehouses and distribution centers aren’t themselves usually treated as goods. Available space in racks, commit charge size in operational stations, and spatial location and count of wooden and plastic pallets as a function of time, in free and bundled form, within and around facilities, are not readily known. </p>
+                <p>Historical and real-time knowledge of existing pallets and operational floor pallet load –i.e. available rack space, understaffed palleted product buffer zones—, and similar operational insight is not only desired but often critical in short-term logistics decision-making and medium-term planning. Dedicated resources for longitudinal and real-time information management of such is uncommon. </p>
+            </div>
+            <div class="problem-definition-image">
+                <img src="image1.jpg" alt="Image description">
+                <p>Cite:  <a href=" https://www.serviaplogistics.com/types-of-pallets-warehouse/" class="hyperlink">Pallets warehouse</a></p>
+            </div>
+            <div class="problem-definition-content"><p>Business impact from pallets alone, we are told, starts in pallet asset shrinkage at a total direct cost of $USD 25+ per pallet, and grows to indirect cost in the aggregate thousands of $USD per year in distribution misses when pallets aren’t available to satisfy shipments. We also learned that human operators are commissioned to perform routine tours per established time unit –hours, days, weeks—, with the goal of maintaining up-to-date asset location and count.  At an average warehouse size of nearly 17,500 feet, the effort quickly becomes time consuming and error-prone during peak hours and in larger facilities throughout the day. </p>
+            </div>
+            <div class="problem-definition-image">
+                <img src="image2.jpg" alt="Image description">
+                <p>Cite:  <a href="https://www.pinterest.com/pin/139611657184803841/ " class="hyperlink">Pinterest</a></p>
+
+            </div>
+            <div class="problem-definition-content">
+                <p>We are purposing, training/re-training, tunning, and benchmarking state-of-the-art (SOTA) object detection architectures on existing, augmented, and combined datasets, using data augmentation, MLOps, and edge technologies with the goal of delivering a cost-effective, vehicle-mountable, modular intelligent video analytics (IVA) solution for key intralogistics asset inventorying and reporting in real time. 
+                </p>
+                <p>Our effort differentiates from previous work to date from our specific requirements on: 
+                    <ul>
+                        <li>Inclusion of YOLOv8 (You Only Look Once, Redmon et al, 2015; YOLOv8 released January 2024) as reference model architecture</li>
+                        <li>Benchmarking across different training sets</li>
+                        <li>Inferencing from moving forklifts using YOLOv8</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div id="related" class="problem-definition">
+            <div class="problem-definition-content">
+                <h2>2. Related Work <a class="hyperlink" href="#top">↥</a></h2>
+
+                <p>Projects, demos, and blogs showcasing real-time detection of certain intralogistics objects like pallets are abundant; to our knowledge, most of them almost exclusively focus on detection metrics of intralogistics objects alone, without comparative performance of earlier versions of YOLO architectures vs alternatives, using a specific training dataset, against specific contextual target conditions:</p>
+
+                <ul>
+                    <li>Near optimal scenery, including favorable illumination,</li>
+                    <li>Shorter range distance, and,</li>
+                    <li>With few, if any, considerations of core and ancillary requirements and variances in environment variables, such as:
+                        <ul>
+                            <li>Scene “density” i.e. single pallets in aisles vs an unstacked clusters of pallets in distant corners, possibly directly inaccessible by forklift</li>
+                            <li>Partial pallet occlusion from plastic pallet wrap, not just other objects,</li>
+                            <li>Illumination,</li>
+                            <li>Speed of the vehicle to which the inference module is affixed,</li>
+                            <li>Performance at medium to longer detection distance range,</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>YOLOv8, released in late January 2024 and <a class="hyperlink" href="https://github.com/ultralytics/ultralytics">available on Github</a>, is incorporated into Ultralytics. We are exploring its capabilities and performance in our application and scenarios.</p>
+
+                <h3>2.1 Object Detection</h3>
+
+                <p>Modern CNN-based object detection models go about their business in two-stage and single-stage fashion. The single-stage approach pioneered by YOLO detects objects in one pass. YOLO-based iterations directly predict bounding boxes around object class instances, together with confidence values.</p>
+
+                <h3>2.2 Real-time Object Detection</h3>
+
+                <p>Prior work in real-time detection for intralogistics benefit includes the following:</p>
+
+                Y. Li et al., "Pallet detection and localization with RGB image and depth data using deep learning techniques," <em>2021 6th International Conference on Automation, Control and Robotics Engineering (CACRE)</em>, Dalian, China, 2021, pp. 306-310, doi: 10.1109/CACRE52464.2021.9501390.
+                <ul>
+                    <li>The paper introduces a new method called PILA for detecting and localizing pallets using RGB images and depth data with deep learning techniques. The algorithm employs a deep neural network to identify and locate pallets in RGB images, aligns point cloud data with labeled regions of interest, extracts the pallet's front-face plane, and determines its orientation and centric points. The approach achieves a 3D localization accuracy of 1cm and an angle resolution of 0.4 degrees at a distance of 3m, with a running time of less than 700 ms. The research emphasizes the significance of accurate pallet detection for unmanned forklift robots in logistics applications, particularly in the context of the COVID-19 pandemic. Key aspects include challenges in pallet detection, the algorithm's advantages, and the use of SSD architecture for pallet recognition in RGB images.</li>
+                </ul>
+
+                Diwan, T., Anirudh, G. & Tembhurne, J.V. “Object detection using YOLO: challenges, architectural successors, datasets and applications,” <em>Multimed Tools Appl 82</em>, 2023, pp. 9243–9275, doi:10.1007/s11042-022-13644-y    
+                <ul>
+                    <li>Pallet identification and localization algorithm based on RGB image and depth data. Using a Deep Neural Network, the pallet’s point cloud data is correlated with the labeled region of interest. We will use the results as a reference baseline.</li>
+                    <li>The paper reviews object detection, focusing on YOLO model and its successors. It discusses two-stage vs. single-stage detectors, highlighting differences in architecture and performance metrics. YOLO and its successors show improved detection accuracy and faster inference times, making them popular in various applications. Challenges in object detection include multi-scale training and detection of smaller objects. The paper also addresses the evolution of object detectors and related works.</li>
+                </ul>
+
+                M. Zaccaria, R. Monica and J. Aleotti, "A Comparison of Deep Learning Models for Pallet Detection in Industrial Warehouses," <em>2020 IEEE 16th International Conference on Intelligent Computer Communication and Processing (ICCP)</em>, Cluj-Napoca, Romania, 2020, pp. 417-422, doi: 10.1109/ICCP51029.2020.9266168.
+                <ul>
+                    <li>A Comparison of Deep Learning Models for Pallet Detection in Industrial Warehouses</li>
+                    <li>The paper discusses the use of convolutional neural networks (CNNs) for automatic pallet detection in industrial settings using a single RGB camera. It compares the performance of three CNN models - Faster R-CNN, SSD, and YOLOv4 - in identifying pallet front sides and pockets. The study includes a dataset collected from a warehouse and evaluates the models based on their ability to detect pallets. Results show that Faster R-CNN and SSD outperform YOLOv4 in pallet detection. The decision block in the proposed method filters out false positives and ensures safe and reliable autonomous guided vehicle tasks.</li>
+                </ul>
+
+                Syu, JL., Li, HT., Chiang, JS. et al, “A computer vision assisted system for autonomous forklift vehicles in real factory environment,” <em>Multimed Tools Appl 76</em>, 2017, pp.18387–18407, doi: 10.1007/s11042-016-4123-6
+                <ul>
+                    <li>A computer vision assisted system for autonomous forklift vehicles in real factory environment</li>
+                    <li>The paper introduces a computer vision system for autonomous forklift vehicles in real factory settings, focusing on pallet detection using a monocular vision system. It utilizes Haar-like features and the Adaboost algorithm for efficient pallet detection. The system aims to provide a cost-effective solution for pallet detection in industrial environments, improving accuracy and speed.</li>
+                </ul>
+
+                C. Rennie, R. Shome, K. E. Bekris and A. F. De Souza, "A Dataset for Improved RGBD-Based Object Detection and Pose Estimation for Warehouse Pick-and-Place," <em>IEEE Robotics and Automation Letters, vol. 1, no. 2</em>, pp. 1179-1185, July 2016, doi: 10.1109/LRA.2016.2532924.
+                <ul>
+                    <li>The paper introduces a dataset for improving RGBD-based object detection and pose estimation in warehouse pick-and-place tasks. The dataset includes thousands of images with ground truth data for objects used in the Amazon Picking Challenge, focusing on challenges like low illumination and clutter. It emphasizes the importance of accurate pose estimation for successful object manipulation in warehouse shelves and highlights the need for robust algorithms in such environments. The dataset aims to enhance robotic perception solutions for warehouse picking by providing tools for evaluation and improvement.</li>
+                    <li>If we get to expand our project further from pallet detection to include other intralogistics assets, we can refer to this dataset. We know of relevant needs on empty pallet rack (shelving) space and pallet floor buffer overflow incidence knowledge, for real-time and longitudinal operational optimization.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="methods" class="problem-definition">
+            <div class="problem-definition-content">
+                <h2>3. Methods and Approaches <a class="hyperlink" href="#top">↥</a></h2>
+                <h4> We are following a simplified version of CRISP-DM (Cross-Industry Standard Process for Data Mining)</h4>
+                <p>Reference: <a class="hyperlink" href="https://en.wikipedia.org/wiki/Cross-industry_standard_process_for_data_mining">Wikipedia</a></p>
+
+                <ol>
+                    <li>Business Understanding</li>
+                    <li>Data Understanding</li>
+                    <li>Data Preparation</li>
+                    <li>Modeling</li>
+                    <li>Evaluation</li>
+                    <li>Deployment</li>
+                </ol>
+
+                <h4>Adjusted to our objectives and context, this is: </h4>
+                <ol>
+                    <li>Research</li>
+                    <li>Problem Definition / Scope</li>
+                    <li>Data Engineering</li>
+                    <li>Model Development</li>
+                    <li>Model Evaluation</li>
+                    <li>Content Production</li>
+                    <li>Presentation</li>
+                </ol>
+
+                <h3>3.1 Hardware</h3>
+                <p>For training and testing, we are using Intel-based compute, equipped with RTX 4000 NVIDIA hardware, and Apple-based compute, equipped with M3 Max 128GB silicon.</p>
+                <p>For inference, we are using the above plus NVIDIA Jeston hardware, Nano and Xavier models, equipped with common camera models: Intel RealSense d435i (MSRP $334), Stereolabs Zed 2 (MSRP $449), and Orlaco EMOS (third-party sourced), as previously mentioned.</p>
+
+                <h3>3.2 Software</h3>
+                <p>We are consuming YOLOv8 from Ultralytics.</p>
+                <p>We are automating our end-to-end pipeline via scripts, for convenience, and testing, whenever possible, at varied target distances, contextual surroundings, and levels of vehicular speed and autonomy, to perform closed-circuit tours within available warehouses and distribution centers.</p>
+
+                <h3>3.3 Model Architectures</h3>
+                <p>As we need real-time inferencing from a moving device with limited wattage availability, we are targeting most recent versions of YOLOv8, etc—, available in Ultralytics.</p>
+
+            </div>
+        </div>
+
+        <div id="results" class="problem-definition">
+            <div class="problem-definition-content">
+                <h2>4. Experiments <a class="hyperlink" href="#top">↥</a></h2>
+                We experiemented by running YOLOv8 using python package Ultralytics and fine tuned the model.
+                <p> Given the diversity of dataset for training purpose, our model can finely detect the pallet from a very far distance as well as close distance, which solves the industrial issue of pallet detection in different corners of the facility.</p>
+                <h3>4.1 Data</h3>
+                <p>We are using two main sources for separate and combined training inputs and performance benchmarking: 
+                </p> 
+                <ul>
+                    <li>Publicly available datasets </li>
+                    <li>Privately sourced / crafted datasets </li>
+                </ul>
+
+                <h4>Dataset Used</h4>
+                <ul>
+                    <li><a class="hyperlink" href="https://universe.roboflow.com/tum-qlfyo/yolov8_loco-object-detection/dataset/2">Yolov8_Loco object detection Image Dataset(9045 Images)</a> -  yolov8_loco-object-detection_dataset,  TUM , Roboflow Universe, Roboflow, 2024.</li>
+                    <!-- Add other datasets here -->
+                </ul>
+                <div class="problem-definition-image">
+                    <img src="val_batch0_labels.jpg" alt="Image description">
+                </div>
+                This data provide us with the required lables.
+
+                <h4>Custom Datasets</h4>
+                <p>Below is a sample of data collected at a warehouse, supplied by a team member with previous industry experience. The images are frames of a video, showing pallets in a warehouse. Data labels include the dimensions of the pallet in the world coordinate system.</p>
+                <div class="row">
+                    <div class="column">
+                        <h4>Image</h4>
+                      <img src="i1.jpg" alt="Image 1" style="width:100%">
+                    </div>
+
+                    <div class="column">
+                        <h4> Ground truth Value of Pallet Location</h4>
+                        <img src="2842.jpeg" alt="Image 1" style="width: 600px;">
+                    </div>
+                    
+                    
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="i2.jpg" alt="Image 2" style="width:100%">
+                      </div>
+                    <div class="column">
+                      <img src="2872.jpeg" alt="Image 2" style="width:600px;">
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="i3.jpg" alt="Image 3" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="2903.jpeg" alt="Image 3" style="width: 600px;">
+                    </div>
+                    
+                </div>
+            </div>
+            We define our success to be the accuracy of model detecting pallets, we also use confusion matrix where our model identifies all the pallets present in any image.
+            
+        </div>
+
+
+        <div id="results" class="problem-definition">
+            <div class="problem-definition-content">
+                <h2>5. Results <a class="hyperlink" href="#top">↥</a></h2>
+                <div class="video-with-description">
+                    <video controls width="100%" height="400">
+                        <source src="Sample_Output.m4v" type="video/mp4">
+                        <!-- Add other video formats if needed (e.g., WebM, Ogg) -->
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Preliminary results show our approach running inference at 45+ FPS on mid-level NVIDIA Jetson Xavier NX hardware (MSRP $479 to $579) and Intel RealSense d435i (MSRP $334), Stereolabs Zed 2 (MSRP $449), and Orlaco EMOS (third-party sourced) cameras at worst-case 45m range 80%+ detection accuracy with respect to ground-truth in a real-life testing environment. </p>
+                </div>
+                <p>We recorded runs in real-time with overlaid inference results, for analysis.</p>
+                <p>Our best runs achieved worst-case 15m range 96% accuracy, and best-case at less than 5m 98% in available, real-life testing environments at 45+ FPS on mid-level NVIDIA Jetson Xavier hardware (MSRP $479 to $579) using an Intel RealSense d435i (MSRP $334), when trained on a combination of data from both generally available and privately sourced datasets.</p>
+                <!-- <p>As expected, YOLO versions (v5 and above) outperformed Faster R-CNN in speed by a factor greater than two (2) on each run; in our scenario, YOLO maintained accuracy with respect to Faster R-CNN within 7% over short, medium, and long-range inference distance at same average forklift speed and near identical surrounding conditions.</p> ->
+            </div>
+            
+            <div class="problem-definition-image">
+                <img src="confusion_matrix.png" alt="Image description">
+                <p>Confusion Matrix on loco dataset using YOLOv8</p>
+            </div>
+            <p> This matrix shows the results of training our YOLOv8 model using Ultralytics with 20 epocs on LOCO dataset, here it shows the confusion matrix of how clearly we are able to distinguish pallets.</p>
+            Here we can see that out of 10765 pallets, after 20 epochs, our model accurately detected 7284 pallets. 
+            Also, since the data was majorly dominated by pallets, we had a high chance of overfitting the model, but this also detected other objects well too.
+            <div class="problem-definition-image">
+                <img src="results.png" alt="Image description">
+                <p>Results of YOLOv8 using Ultralytics</p>
+            </div>
+            <p>When we run the train on 20 epochs, these are the loss curves that we get on every epoch, we can clearly see that loss is decresing consistently and our precision and recall continuously increase with each epoch.</p>
+            <p> We progressed towards detecting pallets from far distance as well as very near the camera. Our approach worked as we included the diverse dataset to train our model.</p>
+            <!-- <p> </p> -->
+        </div>
+
+        <!-- <div id="next-steps" class="problem-definition">
+            <div class="problem-definition-content">
+                <h2>5. Project Process and What's Next <a class="hyperlink" href="#top">↥</a></h2>
+                Our timeline of tasks to project completion is as follows: 
+                <ol>
+                    <li>Elicitation</li>
+                    <li>Business Problem</li>
+                    <li>Data Availability</li>
+                    <li>Technical Feasibility</li>
+                    <li>Problem Definition</li>
+                    <li>Data Engineering
+                        <ul>
+                            <li>Privately sourced/crafted data production support</li>
+                            <li>Quantitative/qualitative validation - publicly available and privately sourced data</li>
+                            <li>Data Augmentation provisioning</li>
+                        </ul>
+                    </li>
+                    <li>Vertical Prototyping
+                        <ul>
+                            <li>TAO: YOLOv5 and Faster R-CNN</li>
+                        </ul>
+                    </li>
+                    <li>Model Selection
+                        <ul>
+                            <li>TAO</li>
+                            <li>Ultralytics</li>
+                        </ul>
+                    </li>
+                    <li>Model Training -- <em>Current Step</em>
+                        <ul>
+                            <li>Individual and combined data sources, with and without augmentation</li>
+                            <li>Transfer Learning, fine-tuning and quantization</li>
+                        </ul>
+                    </li>
+                    <li>Model Validation</li>
+                    <li>Inference Analytics
+                        <ul>
+                            <li>Wireless collection</li>
+                             <li>AoIVA (Analytics of IVA)</li> 
+                            <li>Comparative Results</li>
+                        </ul>
+                    </li>
+                    <li>Models from Libraries - Ultralytics, TAO</li>
+                    <li>Data from Sources - LOCO, self-authored, both, with and without augmentation</li>
+                    <li>Summary</li>
+                </ol>
+            </div>
+        </div> -->
+
+        <div id="next-steps" class="problem-definition">
+            <div class="problem-definition-content">
+                <h2>6. Discussion <a class="hyperlink" href="#top">↥</a></h2>
+                <!-- Starting from exploring Ultralytics to train pallet dataset, we trained the YOLOv8 model on customised pallet dataset, loco dataset, created confusion matrix to analyse the results   -->
+                We explored Ultralytics to train the YOLOv8 model on LOCO datset. We tested our model on a customised pallet datset that was collected from a warehouse. The project focuses on developing a cost-effective solution for real-time pallet detection and inventorying in warehouse environments. By leveraging advanced object detection architectures and edge computing technologies, the team aims to achieve high accuracy and real-time performance. Preliminary experiments show promising results, with inference speeds exceeding 45 frames per second and accuracies over 80%. Moving forward, the project outlines a roadmap for data collection, model training, and deployment, emphasizing collaboration among team members. Overall, the project represents a significant step towards optimizing warehouse operations and reducing costs through intelligent video analytics.
+                For future perspective, we aim to apply this model to other practical examples like counting the bicycle parking slots which require higher precision.
+            </div>
+        </div>
+
+        <div id="challenges" class="problem-definition">
+            <div class="problem-definition-content">
+                <h2>7. Challenges Encountered <a class="hyperlink" href="#top">↥</a></h2>
+                <!-- Starting from exploring Ultralytics to train pallet dataset, we trained the YOLOv8 model on customised pallet dataset, loco dataset, created confusion matrix to analyse the results   -->
+                <!-- The project focuses on developing a cost-effective solution for real-time pallet detection and inventorying in warehouse environments. By leveraging advanced object detection architectures and edge computing technologies, the team aims to achieve high accuracy and real-time performance. Preliminary experiments show promising results, with inference speeds exceeding 45 frames per second and accuracies over 80%. Moving forward, the project outlines a roadmap for data collection, model training, and deployment, emphasizing collaboration among team members. Overall, the project represents a significant step towards optimizing warehouse operations and reducing costs through intelligent video analytics. -->
+                <p>Finding the right data was a challenge as we required a large enough dataset with various perspectives of pallet to have our YOLOv8 model be trained well. </p>
+                <p>Another challenege was collecting our own custom dataset for the inference stage. We wanted to test whether our model could work and be a realistic solution to help detect pallets in warehouses. Finding a cost-effective solution for real-time pallet detection in not a simple task, and our team believes although we have proposed an affordable solution, there is always room for improvement. </p>
+            </div>
+        </div>
+        <div id="credits" class="team-contributions">
+            <h2>8. Team Contributions <a class="hyperlink" href="#top">↥</a></h2>
+            <table>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Contributed Aspects</th>
+                </tr>
+                <tr>
+                    <td>Oscar Hasburn-Babich</td>
+                    <td>
+                        <u>Research:</u>
+                        <p>Prior work, feasibility, problem definition, solution scope</p>
+
+                        <u>Data:</u>
+                        <p>Engineering and utilization strategy – existing and sourced data</p>
+
+                        <u>Development:</u>
+                        <p>End-to-end vertical Proof-of-Concept (E2E PoC) release</p>
+
+                        <u>Content:</u>
+                        <p>Project proposal draft, project update draft, E2E PoC’s input and output samples for project update, visualizations, results </p>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>Jaegook Alex Kim</td>
+                    <td>
+                        <u>Research:</u>
+                        <p>Prior work, papers, datasets </p>
+
+                        <u>Development: </u>
+                        <p>Model training and testing support </p>
+
+                        <u>Content: </u>
+                        <p>Draft proofreading, editing, IEEE-style citating </p>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>Sneha Maheshwari</td>
+                    <td>
+                        <u>Development: </u>
+                        <p>Model training and testing (Ultralytics) </p>
+
+                        <u>Content: </u>
+                        <p>Final project draft, Results, Experiments, Citations </p>
+
+                        <u>Presentation layer: </u>
+                        <p>Website structure, website content synchronization and maintenance </p>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>McKay Moore</td>
+                    <td>
+                        
+                        <u>Development: </u>
+                        <p>PACE environment setup </p>
+                        
+                        <u>Content: </u>
+                        <p>References, Final project draft </p>
+
+                        <u>Presentation layer: </u>
+                        <p>Website structure development</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
