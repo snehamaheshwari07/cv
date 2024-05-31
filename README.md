@@ -1,2 +1,2 @@
-# cv.github.io
+# cv
 Computer Vision Project
